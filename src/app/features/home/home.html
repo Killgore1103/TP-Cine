@@ -1,0 +1,6 @@
+<section class="home-container">
+    <h2>Peliculas</h2>
+    <input type="text" [(ngModel)]="titulo">
+    <button (click)="buscar()">Buscar</button>
+    <app-pelicula [peliculas]="peliculasEncontradas"></app-pelicula>
+</section>

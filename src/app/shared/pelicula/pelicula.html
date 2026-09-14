@@ -1,0 +1,21 @@
+<main>
+    @for (pelicula of peliculas(); track pelicula.imdbID) {
+    <div class="tarjetaPelicula">
+        <img [src]="pelicula.portadaUrl">
+
+        <div class="informacion">
+            <h2>{{pelicula.titulo}}</h2>
+            <div class="sinopsisYGenero">
+                <div>
+                    <h4>Sinopsis</h4>
+                    <p>{{pelicula.sinopsis}}</p>
+                </div>
+                <div>
+                    <h4>Género</h4>
+                    <p>{{pelicula.genero}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</main>
