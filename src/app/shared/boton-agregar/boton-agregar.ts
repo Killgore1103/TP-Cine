@@ -1,5 +1,6 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Pelicula } from '../pelicula/pelicula';
+import { PeliculaInterface } from '../../core/models/pelicula-interface';
 
 @Component({
   selector: 'app-boton-agregar',
@@ -8,9 +9,10 @@ import { Pelicula } from '../pelicula/pelicula';
   styleUrl: './boton-agregar.css',
 })
 export class BotonAgregar {
-  pelicula = input<Pelicula>;
+  peliculaImdbID = input<string>();
+  peliculaAgregada = output<string>();
 
   agregar(){
-    console.log(this.pelicula);
+    this.peliculaAgregada.emit(this.peliculaImdbID()!);
   }
 }

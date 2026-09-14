@@ -1,0 +1,7 @@
+<section>
+    <h2>Peliculas Database</h2>
+    <input type="text" [(ngModel)]="titulo">
+    <button (click)="buscar()">Buscar</button>
+    <app-pelicula [peliculas]="peliculasEncontradas" (peliculaAgregada)="agregarPelicula($event)"></app-pelicula>
+    <p>{{peliculasEncontradas.length}}</p>
+</section>

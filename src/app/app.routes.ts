@@ -1,14 +1,16 @@
 import { Routes } from '@angular/router';
-import { Home } from './features/home/home';
+import { PeliculasDB } from './features/peliculasdb/peliculasdb';
+import { Cartelera } from './features/cartelera/cartelera';
 
 export const routes: Routes = [
     {
-        path: '',
-        component: Home
+        path: 'database',
+        component: PeliculasDB
     },
-
-
-    
+    {
+        path: '',
+        component: Cartelera
+    },
     {
         path: '**',
         redirectTo: ''
